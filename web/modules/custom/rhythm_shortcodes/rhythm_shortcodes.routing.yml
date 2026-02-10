@@ -1,0 +1,39 @@
+#   Social Icons Autocomplete
+rhythm_shortcodes.ajax_social_icons_autocomplete:
+  path: '/admin/ajax/rhythm_shortcodes/social_icons_autocomplete'
+  defaults:
+    _controller: '\Drupal\rhythm_shortcodes\Controller\RhythmShortcodesController::ajax_social_icons_autocomplete'
+    _title: 'Ajax Social Icons Autocomplete'
+    _format: json
+  requirements:
+    _permission: 'administer nd nd_visualshortcodes'
+
+#   LivIcons Autocomplete
+rhythm_shortcodes.ajax_livicons_autocomplete:
+  path: '/admin/ajax/rhythm_shortcodes/livicons_autocomplete'
+  defaults:
+    _controller: '\Drupal\rhythm_shortcodes\Controller\RhythmShortcodesController::ajax_livicons_autocomplete'
+    _title: 'Ajax LivIcons Autocomplete'
+    _format: json
+  requirements:
+    _permission: 'administer nd nd_visualshortcodes'
+
+#   FontAwesome Icons Autocomplete
+rhythm_shortcodes.ajax_fontawesome_icons_autocomplete:
+  path: '/admin/ajax/rhythm_shortcodes/fontawesome_icons_autocomplete'
+  defaults:
+    _controller: '\Drupal\rhythm_shortcodes\Controller\RhythmShortcodesController::ajax_fontawesome_icons_autocomplete'
+    _title: 'Ajax Fontawesome Icons Autocomplete'
+    _format: json
+  requirements:
+    _permission: 'administer nd nd_visualshortcodes'
+
+#   Node Autocomplete
+rhythm_shortcodes.ajax_node_autocomplete:
+  path: '/admin/ajax/rhythm_shortcodes/node_autocomplete'
+  defaults:
+    _controller: '\Drupal\rhythm_shortcodes\Controller\RhythmShortcodesController::ajax_node_autocomplete'
+    _title: 'Ajax Node Autocomplete'
+    _format: json
+  requirements:
+    _permission: 'administer nd nd_visualshortcodes'

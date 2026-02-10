@@ -1,0 +1,12 @@
+name: 'NikaDevs Visual Shortcodes'
+type: module
+description: 'Visual Shortcodes Editor'
+package: 'NikaDevs'
+core_version_requirement: ^10 || ^11
+
+dependencies:
+  - drupal:filter
+  - jquery_ui:jquery_ui
+  - shortcode:shortcode
+#  - media_wysiwyg:media_wysiwyg
+#  - jquery_update:jquery_update

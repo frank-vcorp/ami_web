@@ -1,0 +1,21 @@
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  Options -MultiViews
+
+  # 0) Deja que /lms lo maneje su propio .htaccess
+  RewriteRule ^lms(/.*)?$ - [L]
+
+  # 1) Raíz del dominio -> /web/
+  RewriteRule ^$ web/ [L]
+
+  # 2) Si el recurso físico existe, sírvelo tal cual
+  RewriteCond %{REQUEST_FILENAME} -f [OR]
+  RewriteCond %{REQUEST_FILENAME} -d
+  RewriteRule ^ - [L]
+
+  # 3) Todo lo que NO empieza con /web -> /web/$1
+  RewriteRule ^(?!web/)(.*)$ web/$1 [L]
+</IfModule>
+
+DirectoryIndex index.php index.html
+

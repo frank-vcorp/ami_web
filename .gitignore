@@ -1,0 +1,7 @@
+/vendor/
+/web/sites/*/files/
+/web/sites/*/settings.php
+core/
+*.sql
+*.tar.gz
+.env

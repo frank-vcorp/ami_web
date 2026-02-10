@@ -1,0 +1,18 @@
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteBase /lms/
+  Options -MultiViews
+
+  # 1) Raíz de /lms -> /lms/web/
+  RewriteRule ^$ web/ [L]
+
+  # 2) Si el recurso físico existe, sírvelo tal cual
+  RewriteCond %{REQUEST_FILENAME} -f [OR]
+  RewriteCond %{REQUEST_FILENAME} -d
+  RewriteRule ^ - [L]
+
+  # 3) Todo lo que NO empieza con /lms/web -> /lms/web/$1
+  RewriteRule ^(?!web/)(.*)$ web/$1 [L]
+</IfModule>
+
+DirectoryIndex index.php index.html
