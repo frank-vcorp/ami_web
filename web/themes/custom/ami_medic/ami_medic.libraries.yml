@@ -1,0 +1,10 @@
+global-styling:
+  css:
+    theme:
+      assets/css/tailwind.css: {}
+      assets/css/custom.css: {}
+  js:
+    assets/js/custom.js: {}
+  dependencies:
+    - core/jquery
+    - core/drupal

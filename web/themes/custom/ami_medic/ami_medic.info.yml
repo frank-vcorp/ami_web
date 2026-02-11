@@ -1,0 +1,22 @@
+name: 'AMI Medic'
+type: theme
+base theme: false
+description: 'Tema personalizado para AMI basado en ClinicMaster (Tailwind)'
+package: Custom
+version: 1.0.0
+core_version_requirement: ^10 || ^11
+
+libraries:
+  - ami_medic/global-styling
+
+regions:
+  header: Header
+  primary_menu: 'Primary menu'
+  secondary_menu: 'Secondary menu'
+  breadcrumb: Breadcrumb
+  highlighted: Highlighted
+  help: Help
+  content: Content
+  sidebar_first: 'Sidebar first'
+  sidebar_second: 'Sidebar second'
+  footer: Footer
