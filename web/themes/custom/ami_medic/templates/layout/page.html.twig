@@ -76,7 +76,7 @@
 
           <!-- Website Logo -->
           <div class="flex items-center align-middle xl:w-41.25 w-33.75 sm:h-20 h-15.25 max-xl:me-2 logo-dark">
-            <a href="{{ path('<front>') }}" class="table-cell align-middle"><img loading="lazy" src="{{ file_url(directory ~ '/assets/images/logo.png') }}" alt="logo" class="object-contain"></a>
+            <a href="{{ path('<front>') }}" class="table-cell align-middle"><img loading="lazy" src="{{ file_url(directory ~ '/assets/images/logo.png') }}" alt="logo" class="object-contain logo-white-filter"></a>
           </div>
 
           <button class="xmenu-toggler lg:hidden float-right mt-4.5 mb-4 lg:ml-7 ml-5 size-11 bg-dark-600 relative cursor-pointer max-lg:order-1 max-sm:ms-auto" aria-label="Toggle navigation menu" type="button">
@@ -210,7 +210,7 @@
              <div class="xl:w-1/2 w-full mb-7.5">
                <div class="relative xl:pl-0 md:pl-20 sm:pl-7.5 md:pr-23.75 sm:pr-16.25">
                  <div class="relative overflow-hidden rounded-3xxl">
-                   <img loading="lazy" src="{{ directory }}/assets/images/about/img1.webp" alt="img1" width="685" height="720">
+                   <img loading="lazy" src="{{ file_url(directory ~ '/assets/images/about/img1.png') }}" alt="img1" width="685" height="720">
                  </div>
                  <div class="2xxl:p-7.5 p-2.5 !pl-0 2xxl:-left-31.25 xl:-left-12.5 left-0 sm:absolute md:top-10 top-50 rounded-4xxl bg-white max-sm:!transform-none" data-speed="0.95">
                    <div class="flex relative overflow-hidden">
