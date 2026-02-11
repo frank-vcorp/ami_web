@@ -1,0 +1,249 @@
+{#
+/**
+ * @file
+ * Theme override to display the 'Nosotros' page.
+ */
+#}
+<div class="page-draper">
+
+  <!-- Header Star -->
+  <header id="headerWrapper1" class="site-header fixed left-0 max-2xl:!top-0 z-999 w-full transition-all duration-300">
+    <div class="relative flex-nowrap justify-start py-6.25 z-99 bg-white 2xl:block hidden">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="flex-1">
+            <div class="relative flex items-center gap-3.5">
+              <div class="flex items-center justify-center size-11.25 min-w-11.25">
+                <span class="icon-cell">
+                  <img loading="lazy" src="{{ directory }}/assets/images/svg/icon1.svg" alt="icon1" width="45" height="45">
+                </span>
+              </div>
+              <div class="overflow-hidden">
+                <span class="font-medium text-2xs mb-1 text-primary">Llámanos</span>
+                <p class="text-secondary font-semibold mb-0"><a href="tel:+521234567890" class="text-secondary">+52 123 456 7890</a></p>
+              </div>
+            </div>
+          </div>
+          <div class="flex-1">
+            <div class="relative flex items-center gap-3.5">
+              <div class="flex items-center justify-center size-11.25 min-w-11.25">
+                <span class="icon-cell">
+                  <img loading="lazy" src="{{ directory }}/assets/images/svg/icon2.svg" alt="icon2" width="45" height="45">
+                </span>
+              </div>
+              <div class="overflow-hidden">
+                <span class="font-medium text-2xs mb-1 text-primary">Corre Electrónico</span>
+                <p class="text-secondary font-semibold mb-0"><a href="mailto:contacto@medicaindustrial.com" class="text-secondary">contacto@medicaindustrial.com</a></p>
+              </div>
+            </div>
+          </div>
+          <div class="flex-1">
+            <div class="relative flex items-center gap-3.5">
+              <div class="flex items-center justify-center size-11.25 min-w-11.25">
+                <span class="icon-cell">
+                  <img loading="lazy" src="{{ directory }}/assets/images/svg/icon3.svg" alt="icon3" width="45" height="45">
+                </span>
+              </div>
+              <div class="overflow-hidden">
+                <span class="font-medium text-2xs mb-1 text-primary">Citas Online</span>
+                <p class="text-secondary font-semibold mb-0">Agendar Ahora <i class="feather icon-arrow-right"></i></p>
+              </div>
+            </div>
+          </div>
+          <div class="flex-1">
+            <div class="relative flex items-center gap-3.5">
+              <div class="flex items-center justify-center size-11.25 min-w-11.25">
+                <span class="icon-cell">
+                  <img loading="lazy" src="{{ directory }}/assets/images/svg/icon4.svg" alt="icon4" width="45" height="45">
+                </span>
+              </div>
+              <div class="overflow-hidden">
+                <span class="font-medium text-2xs mb-1 text-primary">Soporte</span>
+                <p class="text-secondary font-semibold mb-0">Atención 24/7</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="sticky-header main-bar-wraper w-full">
+      <div class="main-bar bg-secondary lg:text-white text-secondary w-full">
+        <div class="container-fluid flex items-center relative">
+
+          <!-- Website Logo -->
+          <div class="flex items-center align-middle xl:w-41.25 w-33.75 sm:h-20 h-15.25 max-xl:me-2 logo-dark">
+            <a href="{{ path('<front>') }}" class="table-cell align-middle"><img loading="lazy" src="{{ directory }}/assets/images/logo-white.svg" alt="logo" class="object-contain"></a>
+          </div>
+
+          <button class="xmenu-toggler lg:hidden float-right mt-4.5 mb-4 lg:ml-7 ml-5 size-11 bg-dark-600 relative cursor-pointer max-lg:order-1 max-sm:ms-auto" aria-label="Toggle navigation menu" type="button">
+            <span class="block absolute left-2.5 h-0.5 rounded-px bg-white duration-300 top-3.25 w-5.5"></span>
+            <span class="block absolute left-2.5 h-0.5 rounded-px bg-white duration-0 top-5.5 w-6.25"></span>
+            <span class="block absolute left-2.5 h-0.5 rounded-px bg-white duration-300 top-8 w-4"></span>
+          </button>
+          
+          <div class="lg:hidden fixed top-0 left-0 bg-black size-full duration-300 z-999 opacity-0 visible pointer-events-none menu-close fade-overlay"></div>
+          
+          <div class="flex lg:basis-auto lg:grow max-lg:flex-col lg:justify-end font-title max-lg:fixed max-lg:h-full max-lg:px-5 max-lg:top-0 max-lg:-left-75 max-lg:z-9999 max-lg:bg-white max-lg:w-72 max-lg:overflow-auto max-lg:duration-700 header-nav custom-scroll">
+            {% if page.primary_menu %}
+              {{ page.primary_menu }}
+            {% else %}
+               <ul class="lg:flex flex-wrap navbar-nav">
+                  <li class="lg:inline-block block max-lg:border-b max-lg:border-gray-200 group">
+                    <a class="lg:py-7 py-2 xl:px-4 lg:px-2 relative lg:inline-block block xl:text-lg text-2sm font-medium hover:text-primary" href="{{ path('<front>') }}">
+                      <span class="inline-block leading-7.5">Inicio</span>
+                    </a>
+                  </li>
+                  <li class="lg:inline-block block max-lg:border-b max-lg:border-gray-200 relative group">
+                    <a class="lg:py-7 py-2 xl:px-4 lg:px-2 relative lg:inline-block block xl:text-lg text-2sm font-medium hover:text-primary" href="/nosotros">
+                      <span class="inline-block leading-7.5">Nosotros</span>
+                    </a>
+                  </li>
+                  <li class="lg:inline-block block max-lg:border-b max-lg:border-gray-200 relative group">
+                    <a class="lg:py-7 py-2 xl:px-4 lg:px-2 relative lg:inline-block block xl:text-lg text-2sm font-medium hover:text-primary" href="#">
+                      <span class="inline-block leading-7.5">Servicios</span>
+                    </a>
+                  </li>
+                  <li class="lg:inline-block block max-lg:border-b max-lg:border-gray-200 relative group">
+                     <a class="lg:py-7 py-2 xl:px-4 lg:px-2 relative lg:inline-block block xl:text-lg text-2sm font-medium hover:text-primary" href="/contacto">
+                      <span class="inline-block leading-7.5">Contacto</span>
+                    </a>
+                  </li>
+               </ul>
+            {% endif %}
+          </div>
+          
+          <div class="extra-nav flex items-center h-20 3xl:pl-7.5 ml-auto max-sm:w-full max-sm:bg-white max-sm:fixed max-sm:-bottom-20 max-sm:left-0 max-sm:px-5 max-sm:shadow-3 max-sm:h-15 max-sm:duration-500 [.extra-nav.active]:bottom-0 [.extra-nav.bottom-end]:-bottom-20">
+            <div class="flex items-center w-full">            
+              <ul class="lg:ml-5 sm:ml-3.75 flex items-center gap-2.5 w-full justify-between">
+                <li class="inline-block">
+                  <a href="#" class="btn btn-primary btn-hover1 max-md:!text-sm max-md:!py-2.5 max-md:!px-4.5 max-md:!rounded-2lg">
+                    Agendar Cita
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+  <!-- Header End -->
+
+  <div id="smooth-wrapper">
+    <div id="smooth-content">
+      <main class="page-content">
+        
+        <!-- Banner -->
+        <div class="2xxl:pt-46 lg:pt-21.5 sm:pt-20 pt-19.5 2xxl:min-h-112.5 lg:min-h-95 md:min-h-80 min-h-62.5 bg-cover bg-center bg-secondary relative z-1 w-full before:absolute before:left-0 before:top-0 before:size-full before:bg-secondary before:opacity-70" style="background-image:url('{{ directory }}/assets/images/banner/bnr1.webp');">
+            <div class="container table relative z-1">
+                <div class="2xxl:h-112.5 lg:h-95 md:h-80 h-62.5 align-middle sm:py-22.5 py-10 text-center table-cell">
+                    <h1 class="2xxl:text-8xl xl:text-6xxl md:text-4xxl text-[32px] font-bold mb-2.5 text-white capitalize">Nosotros</h1>
+                    <nav class="wow fadeInUp">
+                        <ul class="inline-block">
+                            <li class="inline-block text-base font-medium capitalize text-white"><a href="{{ path('<front>') }}" class="text-primary">Inicio</a></li>
+                            <li class="inline-block text-base font-medium capitalize text-white pl-2 before:content-['\f101'] before:float-left before:text-white before:font-bold before:font-['Font_Awesome_5_Free'] before:text-sm before:pr-3 before:top-0.5 before:relative">Nosotros</li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+        
+        <!-- About Content -->
+        <section class="2xxl:pt-25 2xxl:pb-17.5 md:pt-17.5 md:pb-2.5 sm:pt-12.5 pt-10 pb-5 bg-no-repeat bg-right-bottom bg-[url('{{ directory }}/assets/images/background/bg01.webp')]">
+            <div class="container">
+                <div class="row items-center max-xl:flex-col-reverse">
+                    <div class="xl:w-1/2 w-full mb-7.5">
+                        <div class="relative xl:pl-0 md:pl-20 sm:pl-7.5 md:pr-23.75 sm:pr-16.25">
+                            <div class="relative overflow-hidden rounded-3xxl">
+                                <img loading="lazy" src="{{ directory }}/assets/images/about/img1.webp" alt="img1" width="685" height="720">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="xl:w-1/2 w-full mb-7.5">
+                        <div class="section-head style-1 mb-7.5">
+                            <h2 class="xl:text-4xxl sm:text-3xxl text-2xxl font-bold capitalize">Misión y Visión</h2>
+                            <p class="sm:text-lg text-base font-light">
+                                <strong>Misión:</strong> Proporcionar a nuestros clientes servicios integrales de Salud Ocupacional, Higiene y Seguridad, así como capacitación, para dar cumplimiento a la normatividad y al cuidado de la salud de los trabajadores.
+                            </p>
+                            <p class="sm:text-lg text-base font-light mt-4">
+                                <strong>Visión:</strong> Ser la empresa líder en soluciones de salud ocupacional en el bajío, reconocida por su calidad, ética y profesionalismo.
+                            </p>
+                        </div>
+                        <h3 class="text-xl font-bold mb-4">Nuestros Valores</h3>
+                        <ul class="flex flex-wrap text-secondary grid-2 font-medium mb-7.5">
+                            <li class="sm:w-1/2 w-full relative p-1.25 ps-7.5 xl:text-base text-2sm before:absolute before:left-0 before:font-black before:content-['\f109'] before:font-['flaticon'] before:text-primary before:top-2">Integridad</li>
+                            <li class="sm:w-1/2 w-full relative p-1.25 ps-7.5 xl:text-base text-2sm before:absolute before:left-0 before:font-black before:content-['\f109'] before:font-['flaticon'] before:text-primary before:top-2">Gratitud</li>
+                            <li class="sm:w-1/2 w-full relative p-1.25 ps-7.5 xl:text-base text-2sm before:absolute before:left-0 before:font-black before:content-['\f109'] before:font-['flaticon'] before:text-primary before:top-2">Enfoque al Cliente</li>
+                            <li class="sm:w-1/2 w-full relative p-1.25 ps-7.5 xl:text-base text-2sm before:absolute before:left-0 before:font-black before:content-['\f109'] before:font-['flaticon'] before:text-primary before:top-2">Responsabilidad</li>
+                            <li class="sm:w-1/2 w-full relative p-1.25 ps-7.5 xl:text-base text-2sm before:absolute before:left-0 before:font-black before:content-['\f109'] before:font-['flaticon'] before:text-primary before:top-2">Trabajo en Equipo</li>
+                        </ul>
+                        
+                        <h3 class="text-xl font-bold mb-4 mt-8">Certificaciones</h3>
+                        <p>Contamos con certificaciones nacionales e internacionales:</p>
+                        <ul class="flex flex-wrap text-secondary grid-2 font-medium mb-7.5">
+                             <li class="sm:w-1/2 w-full relative p-1.25 ps-7.5 xl:text-base text-2sm before:absolute before:left-0 before:font-black before:content-['\f109'] before:font-['flaticon'] before:text-primary before:top-2">CAOHC (Audiometría)</li>
+                             <li class="sm:w-1/2 w-full relative p-1.25 ps-7.5 xl:text-base text-2sm before:absolute before:left-0 before:font-black before:content-['\f109'] before:font-['flaticon'] before:text-primary before:top-2">NIOSH (Espirometría)</li>
+                             <li class="sm:w-1/2 w-full relative p-1.25 ps-7.5 xl:text-base text-2sm before:absolute before:left-0 before:font-black before:content-['\f109'] before:font-['flaticon'] before:text-primary before:top-2">NHCA (Conservación Auditiva)</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="container">
+          {{ page.content }}
+        </div>
+      </main>
+      
+      <!-- Footer -->
+      <footer class="relative z-1 overflow-hidden bg-light before:absolute before:left-0 before:top-0 before:size-full before:bg-light before:opacity-40" style="background-image: url('{{ directory }}/assets/images/background/bg4.webp'); background-size: cover;">
+    
+        <div class="footer-head">
+          <div class="container relative z-1">
+            <div class="xl:pt-20 pt-12.5 pb-6.25 border-b border-black/10">
+              <div class="row g-3 items-center">
+                <div class="xl:w-1/4 md:w-full sm:w-1/2 w-full">
+                  <h2 class="text-2xl">Contáctanos</h2>
+                  <p class="text">Estamos aquí para ayudarte.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Footer Top -->
+        <div class="md:pt-20 pt-12.5 md:pb-11.25">
+          <div class="container relative z-1">
+            <div class="row">
+              <div class="xl:w-1/4 sm:w-full">
+                <div class="mb-7.5 me-2">
+                  <div class="mb-6">
+                    <a href="{{ path('<front>') }}"><img loading="lazy" src="{{ directory }}/assets/images/logo.svg" alt="logo" width="400" height="120" class="max-w-45"></a> 
+                  </div>
+                  <p class="text-2sm/[1.7] mb-5"><span class="text-primary">AMI</span> Asistencia Médica Industrial.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Footer Bottom -->
+        <div class="footer-bottom">
+          <div class="container relative z-1">
+            <div class="py-3.75 border-t border-black/10 text-base">
+              <div class="row">
+                <div class="lg:w-1/2 w-full xl:text-start text-center"> 
+                  <p class="copyright-text">© <span class="current-year">{{"now"|date("Y")}}</span> <a href="#" target="_blank" class="text-primary">AMI WEB</a>. Todos los derechos reservados.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+      </footer>
+      <!-- Footer End -->
+      
+    </div>
+  </div>
+</div>

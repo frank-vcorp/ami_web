@@ -1,0 +1,341 @@
+{#
+/**
+ * @file
+ * Theme override to display the 'Contacto' page.
+ */
+#}
+<div class="page-draper">
+
+  <!-- Header Star -->
+  <header id="headerWrapper1" class="site-header fixed left-0 max-2xl:!top-0 z-999 w-full transition-all duration-300">
+    <div class="relative flex-nowrap justify-start py-6.25 z-99 bg-white 2xl:block hidden">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="flex-1">
+            <div class="relative flex items-center gap-3.5">
+              <div class="flex items-center justify-center size-11.25 min-w-11.25">
+                <span class="icon-cell">
+                  <img loading="lazy" src="{{ directory }}/assets/images/svg/icon1.svg" alt="icon1" width="45" height="45">
+                </span>
+              </div>
+              <div class="overflow-hidden">
+                <span class="font-medium text-2xs mb-1 text-primary">Llámanos</span>
+                <p class="text-secondary font-semibold mb-0"><a href="tel:+521234567890" class="text-secondary">+52 123 456 7890</a></p>
+              </div>
+            </div>
+          </div>
+          <div class="flex-1">
+            <div class="relative flex items-center gap-3.5">
+              <div class="flex items-center justify-center size-11.25 min-w-11.25">
+                <span class="icon-cell">
+                  <img loading="lazy" src="{{ directory }}/assets/images/svg/icon2.svg" alt="icon2" width="45" height="45">
+                </span>
+              </div>
+              <div class="overflow-hidden">
+                <span class="font-medium text-2xs mb-1 text-primary">Corre Electrónico</span>
+                <p class="text-secondary font-semibold mb-0"><a href="mailto:contacto@medicaindustrial.com" class="text-secondary">contacto@medicaindustrial.com</a></p>
+              </div>
+            </div>
+          </div>
+          <div class="flex-1">
+            <div class="relative flex items-center gap-3.5">
+              <div class="flex items-center justify-center size-11.25 min-w-11.25">
+                <span class="icon-cell">
+                  <img loading="lazy" src="{{ directory }}/assets/images/svg/icon3.svg" alt="icon3" width="45" height="45">
+                </span>
+              </div>
+              <div class="overflow-hidden">
+                <span class="font-medium text-2xs mb-1 text-primary">Citas Online</span>
+                <p class="text-secondary font-semibold mb-0">Agendar Ahora <i class="feather icon-arrow-right"></i></p>
+              </div>
+            </div>
+          </div>
+          <div class="flex-1">
+            <div class="relative flex items-center gap-3.5">
+              <div class="flex items-center justify-center size-11.25 min-w-11.25">
+                <span class="icon-cell">
+                  <img loading="lazy" src="{{ directory }}/assets/images/svg/icon4.svg" alt="icon4" width="45" height="45">
+                </span>
+              </div>
+              <div class="overflow-hidden">
+                <span class="font-medium text-2xs mb-1 text-primary">Soporte</span>
+                <p class="text-secondary font-semibold mb-0">Atención 24/7</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="sticky-header main-bar-wraper w-full">
+      <div class="main-bar bg-secondary lg:text-white text-secondary w-full">
+        <div class="container-fluid flex items-center relative">
+
+          <!-- Website Logo -->
+          <div class="flex items-center align-middle xl:w-41.25 w-33.75 sm:h-20 h-15.25 max-xl:me-2 logo-dark">
+            <a href="{{ path('<front>') }}" class="table-cell align-middle"><img loading="lazy" src="{{ directory }}/assets/images/logo-white.svg" alt="logo" class="object-contain"></a>
+          </div>
+
+          <button class="xmenu-toggler lg:hidden float-right mt-4.5 mb-4 lg:ml-7 ml-5 size-11 bg-dark-600 relative cursor-pointer max-lg:order-1 max-sm:ms-auto" aria-label="Toggle navigation menu" type="button">
+            <span class="block absolute left-2.5 h-0.5 rounded-px bg-white duration-300 top-3.25 w-5.5"></span>
+            <span class="block absolute left-2.5 h-0.5 rounded-px bg-white duration-0 top-5.5 w-6.25"></span>
+            <span class="block absolute left-2.5 h-0.5 rounded-px bg-white duration-300 top-8 w-4"></span>
+          </button>
+          
+          <div class="lg:hidden fixed top-0 left-0 bg-black size-full duration-300 z-999 opacity-0 visible pointer-events-none menu-close fade-overlay"></div>
+          
+          <div class="flex lg:basis-auto lg:grow max-lg:flex-col lg:justify-end font-title max-lg:fixed max-lg:h-full max-lg:px-5 max-lg:top-0 max-lg:-left-75 max-lg:z-9999 max-lg:bg-white max-lg:w-72 max-lg:overflow-auto max-lg:duration-700 header-nav custom-scroll">
+            {% if page.primary_menu %}
+              {{ page.primary_menu }}
+            {% else %}
+               <ul class="lg:flex flex-wrap navbar-nav">
+                  <li class="lg:inline-block block max-lg:border-b max-lg:border-gray-200 group">
+                    <a class="lg:py-7 py-2 xl:px-4 lg:px-2 relative lg:inline-block block xl:text-lg text-2sm font-medium hover:text-primary" href="{{ path('<front>') }}">
+                      <span class="inline-block leading-7.5">Inicio</span>
+                    </a>
+                  </li>
+                  <li class="lg:inline-block block max-lg:border-b max-lg:border-gray-200 relative group">
+                    <a class="lg:py-7 py-2 xl:px-4 lg:px-2 relative lg:inline-block block xl:text-lg text-2sm font-medium hover:text-primary" href="/nosotros">
+                      <span class="inline-block leading-7.5">Nosotros</span>
+                    </a>
+                  </li>
+                  <li class="lg:inline-block block max-lg:border-b max-lg:border-gray-200 relative group">
+                    <a class="lg:py-7 py-2 xl:px-4 lg:px-2 relative lg:inline-block block xl:text-lg text-2sm font-medium hover:text-primary" href="#">
+                      <span class="inline-block leading-7.5">Servicios</span>
+                    </a>
+                  </li>
+                  <li class="lg:inline-block block max-lg:border-b max-lg:border-gray-200 relative group">
+                     <a class="lg:py-7 py-2 xl:px-4 lg:px-2 relative lg:inline-block block xl:text-lg text-2sm font-medium hover:text-primary" href="/contacto">
+                      <span class="inline-block leading-7.5">Contacto</span>
+                    </a>
+                  </li>
+               </ul>
+            {% endif %}
+          </div>
+          
+          <div class="extra-nav flex items-center h-20 3xl:pl-7.5 ml-auto max-sm:w-full max-sm:bg-white max-sm:fixed max-sm:-bottom-20 max-sm:left-0 max-sm:px-5 max-sm:shadow-3 max-sm:h-15 max-sm:duration-500 [.extra-nav.active]:bottom-0 [.extra-nav.bottom-end]:-bottom-20">
+            <div class="flex items-center w-full">            
+              <ul class="lg:ml-5 sm:ml-3.75 flex items-center gap-2.5 w-full justify-between">
+                <li class="inline-block">
+                  <a href="#" class="btn btn-primary btn-hover1 max-md:!text-sm max-md:!py-2.5 max-md:!px-4.5 max-md:!rounded-2lg">
+                    Agendar Cita
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+  <!-- Header End -->
+
+  <div id="smooth-wrapper">
+    <div id="smooth-content">
+      <main class="page-content">
+        
+        <!-- Banner -->
+        <div class="2xxl:pt-46 lg:pt-21.5 sm:pt-20 pt-19.5 2xxl:min-h-112.5 lg:min-h-95 md:min-h-80 min-h-62.5 bg-cover bg-center bg-secondary relative z-1 w-full before:absolute before:left-0 before:top-0 before:size-full before:bg-secondary before:opacity-70" style="background-image:url('{{ directory }}/assets/images/banner/bnr1.webp');">
+            <div class="container table relative z-1">
+                <div class="2xxl:h-112.5 lg:h-95 md:h-80 h-62.5 align-middle sm:py-22.5 py-10 text-center table-cell">
+                    <h1 class="2xxl:text-8xl xl:text-6xxl md:text-4xxl text-[32px] font-bold mb-2.5 text-white capitalize">Contacto</h1>
+                    <nav class="wow fadeInUp">
+                        <ul class="inline-block">
+                            <li class="inline-block text-base font-medium capitalize text-white"><a href="{{ path('<front>') }}" class="text-primary">Inicio</a></li>
+                            <li class="inline-block text-base font-medium capitalize text-white pl-2 before:content-['\f101'] before:float-left before:text-white before:font-bold before:font-['Font_Awesome_5_Free'] before:text-sm before:pr-3 before:top-0.5 before:relative">Contacto</li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Contact Content -->
+        <section class="2xxl:pt-25 2xxl:pb-17.5 md:pt-17.5 md:pb-10 sm:pt-12.5 pt-10 pb-5">
+            <div class="container">
+                <div class="row g-xl-4 items-center">
+                    <div class="xl:w-7/12 pe-xl-4 mb-2.5">
+                        <div class="sm:mb-7.5 mb-5">
+                            <h2 class="xl:text-4xxl sm:text-3xxl text-2xxl font-bold capitalize">Conecta con Nosotros</h2>
+                            <p class="text-base font-normal">Contáctanos para soporte, comentarios o agendar una cita. Llena el formulario y te asistiremos prontamente.</p>
+                        </div>
+                        
+                        <div class="row box-hover-wrapper">
+                            <div class="md:w-1/2 w-full mb-5">
+                                <div class="bg-light py-5 px-6.25 sm:rounded-xxl rounded-lg flex items-center gap-3.75 h-full min-h-30 box-hover">
+                                    <div class="size-15 min-w-15 bg-white text-2xl rounded-full flex items-center justify-center text-primary duration-500 [.box-hover.active_&]:bg-primary [.box-hover.active_&]:text-white">
+                                        <span><i class="feather icon-map-pin"></i></span>
+                                    </div>
+                                    <div class="overflow-hidden">
+                                        <h4 class="text-lg text-secondary mb-1.25">Dirección</h4>
+                                        <p class="text-2sm mb-0">Querétaro, Qro. México (Varias Sucursales)</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="md:w-1/2 w-full mb-5">
+                                <div class="bg-light py-5 px-6.25 sm:rounded-xxl rounded-lg flex items-center gap-3.75 h-full min-h-30 box-hover">
+                                    <div class="size-15 min-w-15 bg-white text-2xl rounded-full flex items-center justify-center text-primary duration-500 [.box-hover.active_&]:bg-primary [.box-hover.active_&]:text-white">
+                                        <span><i class="feather icon-phone"></i></span>
+                                    </div>
+                                    <div class="overflow-hidden">
+                                        <h4 class="text-lg text-secondary mb-1.25">Llámanos</h4>
+                                        <p class="text-2sm mb-0">+52 123-456-7890</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="md:w-1/2 w-full mb-5">
+                                <div class="bg-light py-5 px-6.25 sm:rounded-xxl rounded-lg flex items-center gap-3.75 h-full min-h-30 box-hover">
+                                    <div class="size-15 min-w-15 bg-white text-2xl rounded-full flex items-center justify-center text-primary duration-500 [.box-hover.active_&]:bg-primary [.box-hover.active_&]:text-white">
+                                        <span><i class="feather icon-mail"></i></span>
+                                    </div>
+                                    <div class="overflow-hidden">
+                                        <h4 class="text-lg text-secondary mb-1.25">Envíanos un Correo</h4>
+                                        <p class="text-2sm mb-0">contacto@medicaindustrial.com</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="md:w-1/2 w-full mb-5">
+                                <div class="bg-light py-5 px-6.25 sm:rounded-xxl rounded-lg flex items-center gap-3.75 h-full min-h-30 box-hover">
+                                    <div class="size-15 min-w-15 bg-white text-2xl rounded-full flex items-center justify-center text-primary duration-500 [.box-hover.active_&]:bg-primary [.box-hover.active_&]:text-white">
+                                        <span><i class="feather icon-clock"></i></span>
+                                    </div>
+                                    <div class="overflow-hidden">
+                                        <h4 class="text-lg text-secondary mb-1.25">Horario</h4>
+                                        <p class="text-2sm mb-0">Lun-Vie: 8:00am-6:00pm Sab: 8:00am-1:00pm</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="xl:w-5/12 mb-7.5" data-bottom-top="transform: translateY(50px)" data-top-bottom="transform: translateY(-50px)">
+                        <div class="form-wrapper style-1">
+                            <div class="sm:rounded-3xl rounded-xxl xl:py-12.5 xl:px-10 py-7.5 px-6.25 bg-primary bg-blend-color-burn bg-cover bg-[url('{{ directory }}/assets/images/background/bg02.webp')]">
+                                <div class="sm:mb-7.5 mb-5">
+                                    <h2 class="xl:text-4xxl sm:text-3xxl text-2xxl text-white mb-0">Escríbenos</h2>
+                                    <p class="text-lg text-white mb-0 font-medium">Te responderemos a la brevedad</p>
+                                </div>
+                                <form action="#" class="dzForm" method="POST">
+                                    <div class="row">
+                                        <div class="sm:w-1/2 w-full mb-7.5">
+                                            <div class="relative">
+                                                <input name="dzFirstName" type="text" class="py-3.75 text-lg text-left text-white border-b-2 border-white duration-300 focus:border-yellow-500 placeholder:text-white/0 peer w-full" id="inputFirstName" placeholder="Nombre">
+                                                <label class="absolute left-0 top-3.75 text-lg text-yellow-500 duration-300 transform -translate-y-6 scale-75 origin-[0] peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-5.5 peer-focus:text-yellow-500 peer-placeholder-shown:text-white/60 pointer-events-none" for="inputFirstName">Nombre</label>
+                                            </div>
+                                        </div>
+                                        <div class="sm:w-1/2 w-full mb-7.5">
+                                            <div class="relative">
+                                                <input name="dzLastName" type="text" class="py-3.75 text-lg text-left text-white border-b-2 border-white duration-300 focus:border-yellow-500 placeholder:text-white/0 peer w-full" id="inputLastName" placeholder="Apellido">
+                                                <label class="absolute left-0 top-3.75 text-lg text-yellow-500 duration-300 transform -translate-y-6 scale-75 origin-[0] peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-5.5 peer-focus:text-yellow-500 peer-placeholder-shown:text-white/60 pointer-events-none" for="inputLastName">Apellido</label>
+                                            </div>
+                                        </div>
+                                        <div class="sm:w-1/2 w-full mb-7.5">
+                                            <div class="relative">
+                                                <input name="dzEmail" type="email" class="py-3.75 text-lg text-left text-white border-b-2 border-white duration-300 focus:border-yellow-500 placeholder:text-white/0 peer w-full" id="inputYourEmail" placeholder="Correo">
+                                                <label class="absolute left-0 top-3.75 text-lg text-yellow-500 duration-300 transform -translate-y-6 scale-75 origin-[0] peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-5.5 peer-focus:text-yellow-500 peer-placeholder-shown:text-white/60 pointer-events-none" for="inputYourEmail">Correo</label>
+                                            </div>
+                                        </div>
+                                        <div class="sm:w-1/2 w-full mb-7.5">
+                                            <div class="relative">
+                                                <input name="dzPhoneNumber" type="text" class="py-3.75 text-lg text-left text-white border-b-2 border-white duration-300 focus:border-yellow-500 placeholder:text-white/0 peer w-full dz-number" id="inputPhoneNumber" placeholder="Teléfono">
+                                                <label class="absolute left-0 top-3.75 text-lg text-yellow-500 duration-300 transform -translate-y-6 scale-75 origin-[0] peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-5.5 peer-focus:text-yellow-500 peer-placeholder-shown:text-white/60 pointer-events-none" for="inputPhoneNumber">Teléfono</label>
+                                            </div>
+                                        </div>
+                                        <div class="sm:w-full mb-7.5">
+                                            <div class="relative">
+                                                <textarea name="dzMessage" class="py-3.75 text-lg text-left text-white border-b-2 border-white duration-300 focus:border-yellow-500 placeholder:text-white/0 w-full peer" id="inputMessage" rows="6" placeholder="Mensaje"></textarea>
+                                                <label class="absolute left-0 top-3.75 text-lg text-yellow-500 duration-300 transform -translate-y-6 scale-75 origin-[0] peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-5.5 peer-focus:text-yellow-500 peer-placeholder-shown:text-white/60 pointer-events-none" for="inputPhoneNumber">Mensaje</label>
+                                            </div>
+                                        </div>
+                                        <div class="w-full">
+                                            <button type="submit" name="submit" value="submit" class="btn btn-lg btn-icon btn-white group">
+                                                Enviar <span class="size-11 min-w-11 bg-secondary text-white rounded-2lg inline-flex items-center justify-center -my-2.75 -mr-4.5 ml-3 duration-500 group-hover:bg-white group-hover:text-secondary"><i class="feather icon-arrow-right"></i></span>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Map Section -->
+        <div class="clearfix">
+            <div class="overflow-hidden lg:h-150 h-100 relative">
+                <iframe class="size-full -mb-2" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d119515.9547725553!2d-100.43462153578502!3d20.588061313463863!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85d344d978895857%3A0xe38f757964906560!2sSantiago%20de%20Quer%C3%A9taro%2C%20Qro.!5e0!3m2!1ses-419!2smx!4v1707780000000!5m2!1ses-419!2smx" style="border:0;" allowfullscreen="" referrerpolicy="no-referrer-when-downgrade" title="Google Map showing Querétaro"></iframe>
+                
+                <div class="container">
+                    <div class="bg-white sm:p-7.5 p-5 sm:rounded-xxl rounded-lg sm:w-63.75 w-50 lg:top-37.5 lg:left-150 sm:top-25 sm:left-25 top-7.5 left-7.5 shadow-7 absolute">
+                        <div class="mb-2.5 w-30">
+                            <img loading="lazy" src="{{ directory }}/assets/images/logo.svg" alt="logo" width="400" height="120">
+                        </div>
+                        <div>
+                            <p class="mb-0">Santiago de Querétaro, Qro. México</p>
+                        </div>
+                        <div class="pt-3 mt-3.75 border-t border-black/10">
+                            <a href="https://www.google.com/maps/" target="_blank" class="flex items-center justify-between font-medium text-primary">Abrir Mapa 
+                                <i class="feather icon-arrow-right inline-block text-base"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+          {{ page.content }}
+        </div>
+      </main>
+      
+      <!-- Footer -->
+      <footer class="relative z-1 overflow-hidden bg-light before:absolute before:left-0 before:top-0 before:size-full before:bg-light before:opacity-40" style="background-image: url('{{ directory }}/assets/images/background/bg4.webp'); background-size: cover;">
+    
+        <div class="footer-head">
+          <div class="container relative z-1">
+            <div class="xl:pt-20 pt-12.5 pb-6.25 border-b border-black/10">
+              <div class="row g-3 items-center">
+                <div class="xl:w-1/4 md:w-full sm:w-1/2 w-full">
+                  <h2 class="text-2xl">Contáctanos</h2>
+                  <p class="text">Estamos aquí para ayudarte.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Footer Top -->
+        <div class="md:pt-20 pt-12.5 md:pb-11.25">
+          <div class="container relative z-1">
+            <div class="row">
+              <div class="xl:w-1/4 sm:w-full">
+                <div class="mb-7.5 me-2">
+                  <div class="mb-6">
+                    <a href="{{ path('<front>') }}"><img loading="lazy" src="{{ directory }}/assets/images/logo.svg" alt="logo" width="400" height="120" class="max-w-45"></a> 
+                  </div>
+                  <p class="text-2sm/[1.7] mb-5"><span class="text-primary">AMI</span> Asistencia Médica Industrial.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Footer Bottom -->
+        <div class="footer-bottom">
+          <div class="container relative z-1">
+            <div class="py-3.75 border-t border-black/10 text-base">
+              <div class="row">
+                <div class="lg:w-1/2 w-full xl:text-start text-center"> 
+                  <p class="copyright-text">© <span class="current-year">{{"now"|date("Y")}}</span> <a href="#" target="_blank" class="text-primary">AMI WEB</a>. Todos los derechos reservados.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+      </footer>
+      <!-- Footer End -->
+      
+    </div>
+  </div>
+</div>
