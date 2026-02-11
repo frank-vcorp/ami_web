@@ -1014,6 +1014,43 @@
           });
         };
 
+        const handleMobileMenu = () => {
+          const toggler = document.querySelector('.xmenu-toggler');
+          const menu = document.querySelector('.header-nav');
+          const overlay = document.querySelector('.menu-close');
+
+          if (toggler && menu) {
+            toggler.addEventListener('click', () => {
+              menu.classList.toggle('active');
+              if (menu.classList.contains('active')) {
+                menu.style.left = "0";
+                if (overlay) {
+                  overlay.classList.add('visible');
+                  overlay.style.opacity = "0.5";
+                  overlay.style.pointerEvents = "all";
+                }
+              } else {
+                menu.style.left = "";
+                if (overlay) {
+                  overlay.classList.remove('visible');
+                  overlay.style.opacity = "0";
+                  overlay.style.pointerEvents = "none";
+                }
+              }
+            });
+
+            if (overlay) {
+              overlay.addEventListener('click', () => {
+                menu.classList.remove('active');
+                menu.style.left = "";
+                overlay.classList.remove('visible');
+                overlay.style.opacity = "0";
+                overlay.style.pointerEvents = "none";
+              });
+            }
+          }
+        };
+
         /* Function ============ */
         return {
           init() {
@@ -1042,6 +1079,7 @@
             handleflatpickr();
             handlePreloaderBars();
             handleMenuActive();
+            handleMobileMenu();
           },
 
           load() { },

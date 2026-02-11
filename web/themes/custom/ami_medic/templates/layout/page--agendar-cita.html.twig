@@ -1,0 +1,89 @@
+{#
+/**
+ * @file
+ * Theme override to display the 'Agendar Cita' page.
+ */
+#}
+<div class="page-wraper">
+  {% include directory ~ '/templates/includes/header.html.twig' ignore missing %}
+
+  <div id="smooth-wrapper">
+    <div id="smooth-content">
+      <main class="page-content">
+        
+        <!-- Banner -->
+        <div class="2xxl:pt-46 lg:pt-21.5 sm:pt-20 pt-19.5 2xxl:min-h-80 lg:min-h-60 md:min-h-50 min-h-40 bg-cover bg-center bg-secondary relative z-1 w-full before:absolute before:left-0 before:top-0 before:size-full before:bg-secondary before:opacity-70" style="background-image:url('/{{ directory }}/assets/images/banner/hero-main.png');">
+            <div class="container table relative z-1">
+                <div class="2xxl:h-80 lg:h-60 md:h-50 h-40 align-middle sm:py-10 py-5 text-center table-cell">
+                    <h1 class="2xxl:text-6xl xl:text-5xl md:text-3xl text-2xl font-bold mb-2.5 text-white capitalize">Agendar Cita</h1>
+                    <nav class="wow fadeInUp">
+                        <ul class="inline-block">
+                            <li class="inline-block text-base font-medium capitalize text-white"><a href="{{ path('<front>') }}" class="text-primary">Inicio</a></li>
+                            <li class="inline-block text-base font-medium capitalize text-white pl-2 before:content-['\f101'] before:float-left before:text-white before:font-bold before:font-['Font_Awesome_5_Free'] before:text-sm before:pr-3 before:top-0.5 before:relative">Citas</li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Appointment Form Section -->
+        <section class="content-inner">
+            <div class="container">
+                <div class="row justify-center">
+                    <div class="xl:w-8/12 lg:w-10/12 w-full">
+                        <div class="form-wrapper style-1 bg-white shadow-lg rounded-2xl p-10">
+                            <div class="section-head text-center mb-10">
+                                <h2 class="title text-3xl font-bold mb-4">Solicitud de Servicio</h2>
+                                <p class="text-lg">Complete el siguiente formulario y un asesor se pondrá en contacto con usted para confirmar los detalles.</p>
+                            </div>
+                            
+                            <form action="#" method="POST" onsubmit="event.preventDefault(); alert('Solicitud enviada. Nos pondremos en contacto pronto.');">
+                                <div class="row g-5">
+                                    <div class="sm:w-1/2 w-full">
+                                        <label class="form-label font-medium mb-2">Nombre Completo</label>
+                                        <input type="text" class="form-control w-full p-3 border rounded-lg focus:border-primary focus:outline-none" placeholder="Juan Pérez" required>
+                                    </div>
+                                    <div class="sm:w-1/2 w-full">
+                                        <label class="form-label font-medium mb-2">Empresa</label>
+                                        <input type="text" class="form-control w-full p-3 border rounded-lg focus:border-primary focus:outline-none" placeholder="Nombre de su empresa">
+                                    </div>
+                                    <div class="sm:w-1/2 w-full">
+                                        <label class="form-label font-medium mb-2">Teléfono</label>
+                                        <input type="tel" class="form-control w-full p-3 border rounded-lg focus:border-primary focus:outline-none" placeholder="+52 ..." required>
+                                    </div>
+                                    <div class="sm:w-1/2 w-full">
+                                        <label class="form-label font-medium mb-2">Correo Electrónico</label>
+                                        <input type="email" class="form-control w-full p-3 border rounded-lg focus:border-primary focus:outline-none" placeholder="email@empresa.com" required>
+                                    </div>
+                                    <div class="w-full">
+                                        <label class="form-label font-medium mb-2">Tipo de Servicio</label>
+                                        <select class="form-control w-full p-3 border rounded-lg focus:border-primary focus:outline-none">
+                                            <option>Evaluaciones Médicas</option>
+                                            <option>Clínica In-Plant</option>
+                                            <option>Ergonomía</option>
+                                            <option>Consultoría de Seguridad</option>
+                                            <option>Otro</option>
+                                        </select>
+                                    </div>
+                                    <div class="w-full">
+                                        <label class="form-label font-medium mb-2">Detalles / Comentarios</label>
+                                        <textarea class="form-control w-full p-3 border rounded-lg focus:border-primary focus:outline-none h-32" placeholder="Describa sus necesidades..."></textarea>
+                                    </div>
+                                    <div class="w-full text-center">
+                                        <button type="submit" class="btn btn-primary btn-lg rounded-full px-10 py-3 text-white font-bold transition-transform hover:scale-105">Enviar Solicitud</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+      </main>
+      
+      {% include directory ~ '/templates/includes/footer.html.twig' ignore missing %}
+      
+    </div>
+  </div>
+</div>

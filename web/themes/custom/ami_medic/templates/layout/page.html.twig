@@ -76,7 +76,7 @@
 
           <!-- Website Logo -->
           <div class="flex items-center align-middle xl:w-41.25 w-33.75 sm:h-20 h-15.25 max-xl:me-2 logo-dark">
-            <a href="{{ path('<front>') }}" class="table-cell align-middle"><img loading="lazy" src="{{ directory }}/assets/images/logo-white.svg" alt="logo" class="object-contain"></a>
+            <a href="{{ path('<front>') }}" class="table-cell align-middle"><img loading="lazy" src="/{{ directory }}/assets/images/logo.png" alt="logo" class="object-contain"></a>
           </div>
 
           <button class="xmenu-toggler lg:hidden float-right mt-4.5 mb-4 lg:ml-7 ml-5 size-11 bg-dark-600 relative cursor-pointer max-lg:order-1 max-sm:ms-auto" aria-label="Toggle navigation menu" type="button">
@@ -135,7 +135,7 @@
             <div class="flex items-center w-full">            
               <ul class="lg:ml-5 sm:ml-3.75 flex items-center gap-2.5 w-full justify-between">
                 <li class="inline-block">
-                  <a href="#" class="btn btn-primary btn-hover1 max-md:!text-sm max-md:!py-2.5 max-md:!px-4.5 max-md:!rounded-2lg">
+                  <a href="/agendar-cita" class="btn btn-primary btn-hover1 max-md:!text-sm max-md:!py-2.5 max-md:!px-4.5 max-md:!rounded-2lg">
                     Agendar Cita
                   </a>
                 </li>
@@ -168,7 +168,7 @@
        {% endif %}
 
        <!-- Hero Section -->
-       <div class="3xl:h-225 xl:h-212.5 lg:h-145 h-auto bg-center relative z-1 overflow-hidden max-lg:pt-12.5 bg-cover" style="background-image: url('{{ directory }}/assets/images/hero-banner/bg1.webp');">
+       <div class="3xl:h-225 xl:h-212.5 lg:h-145 h-auto bg-center relative z-1 overflow-hidden max-lg:pt-12.5 bg-cover" style="background-image: url('/{{ directory }}/assets/images/banner/hero-main.pngro-main.png');">
           <div class="container h-full">
             <div class="h-full">
               <span class="font-bold text-base [writing-mode:tb] -rotate-180 -translate-y-1/2 absolute 2xxl:left-12.5 left-7.5 top-1/2 text-secondary xxl:block hidden">SERVICIO DE EMERGENCIA 24/7</span>
