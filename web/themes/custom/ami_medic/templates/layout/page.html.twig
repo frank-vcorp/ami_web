@@ -76,7 +76,7 @@
 
           <!-- Website Logo -->
           <div class="flex items-center align-middle xl:w-41.25 w-33.75 sm:h-20 h-15.25 max-xl:me-2 logo-dark">
-            <a href="{{ path('<front>') }}" class="table-cell align-middle"><img loading="lazy" src="{{ file_url(directory ~ '/assets/images/logo.png" alt="logo" class="object-contain"></a>
+            <a href="{{ path('<front>') }}" class="table-cell align-middle"><img loading="lazy" src="{{ file_url(directory ~ '/assets/images/logo.png') }}" alt="logo" class="object-contain"></a>
           </div>
 
           <button class="xmenu-toggler lg:hidden float-right mt-4.5 mb-4 lg:ml-7 ml-5 size-11 bg-dark-600 relative cursor-pointer max-lg:order-1 max-sm:ms-auto" aria-label="Toggle navigation menu" type="button">
@@ -90,7 +90,7 @@
           <div class="flex lg:basis-auto lg:grow max-lg:flex-col lg:justify-end font-title max-lg:fixed max-lg:h-full max-lg:px-5 max-lg:top-0 max-lg:-left-75 max-lg:z-9999 max-lg:bg-white max-lg:w-72 max-lg:overflow-auto max-lg:duration-700 header-nav custom-scroll">
             <div class="flex items-center relative z-9 py-6.25 lg:hidden w-33.75 h-15.25">
               <a href="{{ path('<front>') }}" class="table-cell align-middle">
-                <img loading="lazy" src="{{ directory }}/assets/images/logo.svg" alt="logo" width="400" height="120" class="object-contain duration-500">
+                <img loading="lazy" src="{{ file_url(directory ~ '/assets/images/logo.png') }}" alt="logo" width="400" height="120" class="object-contain duration-500">
               </a>
             </div>
             
@@ -168,7 +168,7 @@
        {% endif %}
 
        <!-- Hero Section -->
-       <div class="3xl:h-225 xl:h-212.5 lg:h-145 h-auto bg-center relative z-1 overflow-hidden max-lg:pt-12.5 bg-cover" style="background-image: url('{{ file_url(directory ~ '/assets/images/banner/hero-main.pngro-main.png');">
+       <div class="3xl:h-225 xl:h-212.5 lg:h-145 h-auto bg-center relative z-1 overflow-hidden max-lg:pt-12.5 bg-cover" style="background-image: url('{{ file_url(directory ~ '/assets/images/hero-main.png') }}');">
           <div class="container h-full">
             <div class="h-full">
               <span class="font-bold text-base [writing-mode:tb] -rotate-180 -translate-y-1/2 absolute 2xxl:left-12.5 left-7.5 top-1/2 text-secondary xxl:block hidden">SERVICIO DE EMERGENCIA 24/7</span>
@@ -303,7 +303,7 @@
               <div class="xl:w-1/4 sm:w-full">
                 <div class="mb-7.5 me-2">
                   <div class="mb-6">
-                    <a href="{{ path('<front>') }}"><img loading="lazy" src="{{ directory }}/assets/images/logo.svg" alt="logo" width="400" height="120" class="max-w-45"></a> 
+                    <a href="{{ path('<front>') }}"><img loading="lazy" src="{{ file_url(directory ~ '/assets/images/logo.png') }}" alt="logo" width="400" height="120" class="max-w-45"></a> 
                   </div>
                   <p class="text-2sm/[1.7] mb-5"><span class="text-primary">AMI</span> Administración Médica Industrial.</p>
                 </div>
@@ -364,7 +364,7 @@
     <div class="sm:p-7.5 p-5 grow overflow-y-auto">
        <div class="mb-8.75">
          <div class="w-40 mb-5">
-           <a href="{{ path('<front>') }}"><img loading="lazy" src="{{ directory }}/assets/images/logo.svg" alt="logo" width="400" height="120"></a>
+           <a href="{{ path('<front>') }}"><img loading="lazy" src="{{ file_url(directory ~ '/assets/images/logo.png') }}" alt="logo" width="400" height="120"></a>
          </div>
          <p class="mb-0">AMI - Administración Médica Industrial. Soluciones integrales de salud para empresas.</p>
        </div>
