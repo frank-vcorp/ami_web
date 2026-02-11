@@ -1,7 +1,11 @@
 global-styling:
   css:
     theme:
-      assets/css/tailwind.css: {}
+      assets/vendor/swiper/swiper-bundle.min.css: {}
+      assets/icons/fontawesome/css/all.min.css: {}
+      assets/icons/flaticon/flaticon.css: {}
+      assets/icons/feather/css/iconfont.css: {}
+      assets/css/style.css: {}
       assets/css/custom.css: {}
   js:
     assets/js/custom.js: {}
