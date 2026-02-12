@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AMI | Salud Responsable</title>
+
+    <!-- CSS Assets -->
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/custom.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- Tailwind (CDN for demo speed if needed, but style.css should have it) -->
+    <!-- Assuming style.css contains the compiled tailwind/theme styles -->
+
+    <style>
+        /* Speed enhancements for Demo */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        .fade-in-up {
+            animation: fadeInUp 0.8s ease-out forwards;
+            opacity: 0;
+            transform: translateY(20px);
+        }
+
+        @keyframes fadeInUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .hero-floating-img {
+            animation: float 6s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0% {
+                transform: translate(-50%, 0px);
+            }
+
+            50% {
+                transform: translate(-50%, -20px);
+            }
+
+            100% {
+                transform: translate(-50%, 0px);
+            }
+        }
+    </style>
+</head>
+
+<body class="font-sans text-bodycolor">
+
+    <div class="page-draper">
+
+        <!-- Header Star -->
+        <header id="headerWrapper1"
+            class="site-header fixed left-0 top-0 z-999 w-full transition-all duration-300 bg-white">
+            <div class="relative flex-nowrap justify-start py-6.25 z-99 bg-white 2xl:block hidden px-8">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="flex-1">
+                            <div class="relative flex items-center gap-3.5">
+                                <div class="flex items-center justify-center size-11.25 min-w-11.25">
+                                    <span class="icon-cell">
+                                        <img loading="lazy" src="./assets/images/svg/icon1.svg" alt="icon1" width="45"
+                                            height="45">
+                                    </span>
+                                </div>
+                                <div class="overflow-hidden">
+                                    <span class="font-medium text-2xs mb-1 text-primary">Llámanos</span>
+                                    <p class="text-secondary font-semibold mb-0"><a href="tel:+524424800548"
+                                            class="text-secondary">+52 (442) 480 0548</a></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flex-1">
+                            <div class="relative flex items-center gap-3.5">
+                                <div class="flex items-center justify-center size-11.25 min-w-11.25">
+                                    <span class="icon-cell">
+                                        <img loading="lazy" src="./assets/images/svg/icon2.svg" alt="icon2" width="45"
+                                            height="45">
+                                    </span>
+                                </div>
+                                <div class="overflow-hidden">
+                                    <span class="font-medium text-2xs mb-1 text-primary">Correo Electrónico</span>
+                                    <p class="text-secondary font-semibold mb-0"><a
+                                            href="mailto:contacto@medicaindustrial.com"
+                                            class="text-secondary">contacto@medicaindustrial.com</a></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flex-1">
+                            <div class="relative flex items-center gap-3.5">
+                                <div class="flex items-center justify-center size-11.25 min-w-11.25">
+                                    <span class="icon-cell">
+                                        <img loading="lazy" src="./assets/images/svg/icon3.svg" alt="icon3" width="45"
+                                            height="45">
+                                    </span>
+                                </div>
+                                <div class="overflow-hidden">
+                                    <span class="font-medium text-2xs mb-1 text-primary">Citas Online</span>
+                                    <p class="text-secondary font-semibold mb-0">Agendar Ahora <i
+                                            class="feather icon-arrow-right"></i></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flex-1">
+                            <div class="relative flex items-center gap-3.5">
+                                <div class="flex items-center justify-center size-11.25 min-w-11.25">
+                                    <span class="icon-cell">
+                                        <img loading="lazy" src="./assets/images/svg/icon4.svg" alt="icon4" width="45"
+                                            height="45">
+                                    </span>
+                                </div>
+                                <div class="overflow-hidden">
+                                    <span class="font-medium text-2xs mb-1 text-primary">Soporte</span>
+                                    <p class="text-secondary font-semibold mb-0">Atención 24/7</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="sticky-header main-bar-wraper w-full">
+                <div class="main-bar bg-secondary lg:text-white text-secondary w-full">
+                    <div class="container-fluid flex items-center relative px-8">
+
+                        <!-- Website Logo -->
+                        <div
+                            class="flex items-center align-middle xl:w-41.25 w-33.75 sm:h-20 h-15.25 max-xl:me-2 logo-dark">
+                            <a href="#" class="table-cell align-middle"><img loading="lazy"
+                                    src="./assets/images/logo.png" alt="logo"
+                                    class="object-contain logo-white-filter"></a>
+                        </div>
+
+                        <button
+                            class="xmenu-toggler lg:hidden float-right mt-4.5 mb-4 lg:ml-7 ml-5 size-11 bg-dark-600 relative cursor-pointer max-lg:order-1 max-sm:ms-auto"
+                            aria-label="Toggle navigation menu" type="button">
+                            <span
+                                class="block absolute left-2.5 h-0.5 rounded-px bg-white duration-300 top-3.25 w-5.5"></span>
+                            <span
+                                class="block absolute left-2.5 h-0.5 rounded-px bg-white duration-0 top-5.5 w-6.25"></span>
+                            <span
+                                class="block absolute left-2.5 h-0.5 rounded-px bg-white duration-300 top-8 w-4"></span>
+                        </button>
+
+                        <div
+                            class="lg:hidden fixed top-0 left-0 bg-black size-full duration-300 z-999 opacity-0 visible pointer-events-none menu-close fade-overlay">
+                        </div>
+
+                        <div
+                            class="flex lg:basis-auto lg:grow max-lg:flex-col lg:justify-end font-title max-lg:fixed max-lg:h-full max-lg:px-5 max-lg:top-0 max-lg:-left-75 max-lg:z-9999 max-lg:bg-white max-lg:w-72 max-lg:overflow-auto max-lg:duration-700 header-nav custom-scroll">
+                            <div class="flex items-center relative z-9 py-6.25 lg:hidden w-33.75 h-15.25">
+                                <a href="#" class="table-cell align-middle">
+                                    <img loading="lazy" src="./assets/images/logo.png" alt="logo" width="400"
+                                        height="120" class="object-contain duration-500">
+                                </a>
+                            </div>
+
+                            <ul class="lg:flex flex-wrap navbar-nav">
+                                <li class="lg:inline-block block max-lg:border-b max-lg:border-gray-200 group">
+                                    <a class="lg:py-7 py-2 xl:px-4 lg:px-2 relative lg:inline-block block xl:text-lg text-2sm font-medium hover:text-primary text-white"
+                                        href="#">
+                                        <span class="inline-block leading-7.5">Inicio</span>
+                                    </a>
+                                </li>
+                                <li class="lg:inline-block block max-lg:border-b max-lg:border-gray-200 relative group">
+                                    <a class="lg:py-7 py-2 xl:px-4 lg:px-2 relative lg:inline-block block xl:text-lg text-2sm font-medium hover:text-primary text-white"
+                                        href="#about">
+                                        <span class="inline-block leading-7.5">Nosotros</span>
+                                    </a>
+                                </li>
+                                <li class="lg:inline-block block max-lg:border-b max-lg:border-gray-200 relative group">
+                                    <a class="lg:py-7 py-2 xl:px-4 lg:px-2 relative lg:inline-block block xl:text-lg text-2sm font-medium hover:text-primary text-white"
+                                        href="#services">
+                                        <span class="inline-block leading-7.5">Servicios</span>
+                                    </a>
+                                </li>
+                                <li class="lg:inline-block block max-lg:border-b max-lg:border-gray-200 relative group">
+                                    <a class="lg:py-7 py-2 xl:px-4 lg:px-2 relative lg:inline-block block xl:text-lg text-2sm font-medium hover:text-primary text-white"
+                                        href="#contact">
+                                        <span class="inline-block leading-7.5">Contacto</span>
+                                    </a>
+                                </li>
+                            </ul>
+
+                            <div class="lg:hidden block max-lg:p-5 text-center">
+                                <ul>
+                                    <li class="inline-block mx-0.5">
+                                        <a class="size-10 !leading-10 border border-black/10 text-center text-secondary fab fa-facebook-f"
+                                            target="_blank" href="https://www.facebook.com"></a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div
+                            class="extra-nav flex items-center h-20 3xl:pl-7.5 ml-auto max-sm:w-full max-sm:bg-white max-sm:fixed max-sm:-bottom-20 max-sm:left-0 max-sm:px-5 max-sm:shadow-3 max-sm:h-15 max-sm:duration-500 [.extra-nav.active]:bottom-0 [.extra-nav.bottom-end]:-bottom-20">
+                            <div class="flex items-center w-full">
+                                <ul class="lg:ml-5 sm:ml-3.75 flex items-center gap-2.5 w-full justify-between">
+                                    <li class="inline-block">
+                                        <a href="#"
+                                            class="btn btn-primary btn-hover1 max-md:!text-sm max-md:!py-2.5 max-md:!px-4.5 max-md:!rounded-2lg transform hover:scale-105 transition-transform duration-300">
+                                            Agendar Cita
+                                        </a>
+                                    </li>
+                                    <li class="inline-block" data-drawer="#offcanvas-right"
+                                        data-drawer-placement="right">
+                                        <button type="button"
+                                            class="md:size-12.5 size-10.5 bg-white min-w-10 md:rounded-xxl rounded-lg flex flex-col justify-center items-center relative cursor-pointer toggle-nav-btn"
+                                            aria-label="Toggle drawer">
+                                            <span class="w-5 h-0.5 bg-secondary block duration-500"></span>
+                                            <span class="w-4 my-1.25 h-0.5 bg-secondary block duration-500"></span>
+                                            <span class="w-5 h-0.5 bg-secondary block duration-500"></span>
+                                        </button>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!-- Header End -->
+
+        <div id="smooth-wrapper">
+            <div id="smooth-content">
+                <main class="page-content 2xxl:pt-46 lg:pt-21.5 sm:pt-20 pt-19.5">
+
+                    <!-- Hero Section -->
+                    <div class="3xl:h-225 xl:h-212.5 lg:h-145 h-auto bg-center relative z-1 overflow-hidden max-lg:pt-12.5 bg-cover"
+                        style="background-image: url('./assets/images/hero-main.png');">
+                        <div class="container h-full px-8">
+                            <div class="h-full">
+                                <span
+                                    class="font-bold text-base [writing-mode:tb] -rotate-180 -translate-y-1/2 absolute 2xxl:left-12.5 left-7.5 top-1/2 text-secondary xxl:block hidden">SERVICIO
+                                    DE EMERGENCIA 24/7</span>
+                                <div class="row items-end h-full">
+                                    <div class="lg:w-1/2 w-full self-center">
+                                        <div
+                                            class="2xxl:-ml-12.5 p-8 bg-white/10 backdrop-blur-sm rounded-xl fade-in-up">
+                                            <h1
+                                                class="2xxl:text-6xl xl:text-5xl sm:text-4xxl text-3xxl font-bold mb-2.5 inline">
+                                                Un trabajador <span class="text-primary">SANO</span> es un trabajador
+                                                productivo y feliz ®</h1>
+                                            <img src="./assets/images/hero-banner/line.webp" alt="line" width="242"
+                                                height="83" class="2xxl:inline-block hidden">
+                                            <p class="sm:text-lg text-base max-w-140 font-light sm:mb-8.75 mb-5 mt-4">En
+                                                AMI Salud Responsable estamos conscientes de la importancia de la salud
+                                                de sus colaboradores y creemos que su cuidado es su mejor inversión.</p>
+                                            <a href="#"
+                                                class="btn btn-lg btn-icon btn-primary max-sm:!py-3.5 max-sm:!px-4.5 max-sm:!text-base sm:mr-5 mr-1.25 group">
+                                                Solicitar Información
+                                                <span
+                                                    class="size-11 min-w-11 bg-white rounded-2lg text-heading inline-flex items-center justify-center -my-2.75 md:-mr-5 ml-3 -mr-4 max-sm:hidden"><i
+                                                        class="feather icon-arrow-right group-hover:animate-toRightFromLeft"></i></span>
+                                            </a>
+                                            <a href="#"
+                                                class="btn btn-lg btn-icon btn-secondary max-sm:!py-3.5 max-sm:!px-4.5 max-sm:!text-base group">
+                                                Más Servicios
+                                                <span
+                                                    class="size-11 min-w-11 bg-white rounded-2lg text-heading inline-flex items-center justify-center -my-2.75 md:-mr-5 ml-3 -mr-4 max-sm:hidden"><i
+                                                        class="feather icon-arrow-right group-hover:animate-toRightFromLeft"></i></span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="lg:w-1/2 w-full">
+                                        <div
+                                            class="relative 2xxl:w-216.25 xl:w-187.5 sm:w-137.5 w-full max-xl:-ms-10 max-lg:!mx-auto max-lg:mt-7.5">
+                                            <img class="absolute 2xxl:-bottom-3 lg:-bottom-8 left-1/2 -translate-x-1/2 z-2 hero-floating-img"
+                                                src="./assets/images/hero-banner/img1.png" alt="Medical Professional"
+                                                width="900" height="900">
+                                            <div class="w-full aspect-square relative z-1 -bottom-50">
+                                                <span
+                                                    class="rounded-full block absolute top-1/2 left-1/2 -translate-1/2 aspect-square border-2 border-white/60 w-[70%] bg-white shadow-circle"></span>
+                                                <span
+                                                    class="rounded-full block absolute top-1/2 left-1/2 -translate-1/2 aspect-square border-2 border-white/60 w-[84%] bg-white shadow-circle opacity-60 backdrop-blur-[20px]"></span>
+                                                <span
+                                                    class="rounded-full block absolute top-1/2 left-1/2 -translate-1/2 aspect-square border-2 border-white/60 w-full"></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Services Section -->
+                    <section id="about"
+                        class="2xxl:pt-25 2xxl:pb-17.5 md:pt-17.5 md:pb-2.5 sm:pt-12.5 pt-10 pb-5 bg-no-repeat bg-right-bottom"
+                        style="background-image: url('./assets/images/background/bg01.webp');">
+                        <div class="container px-8">
+                            <div class="row items-center max-xl:flex-col-reverse">
+                                <div class="xl:w-1/2 w-full mb-7.5 fade-in-up" style="animation-delay: 0.2s;">
+                                    <div class="relative xl:pl-0 md:pl-20 sm:pl-7.5 md:pr-23.75 sm:pr-16.25">
+                                        <div
+                                            class="relative overflow-hidden rounded-3xxl transform hover:scale-105 transition-all duration-500">
+                                            <img loading="lazy" src="./assets/images/about/img1.png" alt="img1"
+                                                width="685" height="720">
+                                        </div>
+                                        <div
+                                            class="2xxl:p-7.5 p-2.5 !pl-0 2xxl:-left-31.25 xl:-left-12.5 left-0 sm:absolute md:top-10 top-50 rounded-4xxl bg-white max-sm:!transform-none shadow-xl">
+                                            <div class="flex relative overflow-hidden">
+                                                <div
+                                                    class="[writing-mode:tb] -rotate-180 rounded-tr-2xxl rounded-br-2xxl text-white text-center p-3.75 pl-10 text-base uppercase font-semibold -mr-7.5 bg-secondary">
+                                                    Atención Inmediata
+                                                </div>
+                                                <div
+                                                    class="border-2 border-white rounded-2xxl overflow-hidden 2xxl:w-51.25 sm:w-46.25 w-full relative">
+                                                    <img loading="lazy" src="./assets/images/about/img2.png" alt="img2"
+                                                        width="525" height="665" class="w-full">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="xl:w-1/2 w-full mb-7.5 fade-in-up" style="animation-delay: 0.4s;">
+                                    <div class="section-head style-1 mb-7.5">
+                                        <h2 class="xl:text-4xxl sm:text-3xxl text-2xxl font-bold capitalize">Salud
+                                            Ocupacional de Clase Mundial para su Empresa</h2>
+                                        <p class="sm:text-lg text-base font-light">En AMI, entendemos que un equipo
+                                            saludable es la base de una empresa productiva. Ofrecemos soluciones
+                                            integrales en medicina del trabajo, higiene y seguridad industrial,
+                                            adaptadas a las necesidades específicas de su organización.</p>
+                                    </div>
+                                    <ul class="flex flex-wrap text-secondary grid-2 font-medium mb-7.5">
+                                        <li
+                                            class="sm:w-1/2 w-full relative p-1.25 ps-7.5 xl:text-base text-2sm before:absolute before:left-0 before:font-black before:content-['\f109'] before:font-['flaticon'] before:text-primary before:top-2">
+                                            Evaluaciones Médicas (Audiometrías, Espirometrías)</li>
+                                        <li
+                                            class="sm:w-1/2 w-full relative p-1.25 ps-7.5 xl:text-base text-2sm before:absolute before:left-0 before:font-black before:content-['\f109'] before:font-['flaticon'] before:text-primary before:top-2">
+                                            Capacitación en Salud y Seguridad</li>
+                                        <li
+                                            class="sm:w-1/2 w-full relative p-1.25 ps-7.5 xl:text-base text-2sm before:absolute before:left-0 before:font-black before:content-['\f109'] before:font-['flaticon'] before:text-primary before:top-2">
+                                            Servicio de Personal Especializado (Médicos, Enfermeras)</li>
+                                        <li
+                                            class="sm:w-1/2 w-full relative p-1.25 ps-7.5 xl:text-base text-2sm before:absolute before:left-0 before:font-black before:content-['\f109'] before:font-['flaticon'] before:text-primary before:top-2">
+                                            Ergonomía y Análisis de Riesgos</li>
+                                        <li
+                                            class="sm:w-1/2 w-full relative p-1.25 ps-7.5 xl:text-base text-2sm before:absolute before:left-0 before:font-black before:content-['\f109'] before:font-['flaticon'] before:text-primary before:top-2">
+                                            Unidades Médicas Móviles</li>
+                                        <li
+                                            class="sm:w-1/2 w-full relative p-1.25 ps-7.5 xl:text-base text-2sm before:absolute before:left-0 before:font-black before:content-['\f109'] before:font-['flaticon'] before:text-primary before:top-2">
+                                            Exámenes Toxicológicos y Laboratorio</li>
+                                    </ul>
+                                    <div class="flex flex-wrap items-center">
+                                        <a href="#"
+                                            class="btn btn-lg btn-icon btn-secondary btn-shadow mr-7.5 mb-4 sm:mb-0 group">
+                                            Más Información
+                                            <span
+                                                class="size-11 min-w-11 bg-white rounded-2lg text-heading inline-flex items-center justify-center -my-2.75 -mr-4.5 ml-3"><i
+                                                    class="feather icon-arrow-right group-hover:animate-toRightFromLeft"></i></span>
+                                        </a>
+                                        <div class="inline-flex items-center gap-3.75">
+                                            <div class="widget-media text-primary">
+                                                <i
+                                                    class="feather icon-phone-call dz-ring-effect text-3xxl inline-flex animate-dzRing"></i>
+                                            </div>
+                                            <div class="widget-content">
+                                                <span class="text-bodycolor text-sm font-normal block">¿Necesita
+                                                    ayuda?</span>
+                                                <a href="tel:+524424800548"
+                                                    class="sm:text-lg text-base font-semibold text-secondary">(442) 480
+                                                    05 48</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <div class="container px-8 pb-20">
+                        <h3 class="text-3xl font-bold text-center mb-10">Confían en Nosotros</h3>
+                        <div
+                            class="flex justify-between items-center opacity-50 grayscale hover:grayscale-0 transition-all duration-500">
+                            <!-- Mockup Client Logos (Text for now to allow quick demo) -->
+                            <span class="text-2xl font-bold text-gray-400 hover:text-primary">Mabe</span>
+                            <span class="text-2xl font-bold text-gray-400 hover:text-primary">Michelin</span>
+                            <span class="text-2xl font-bold text-gray-400 hover:text-primary">Samsung</span>
+                            <span class="text-2xl font-bold text-gray-400 hover:text-primary">Tremec</span>
+                            <span class="text-2xl font-bold text-gray-400 hover:text-primary">Eurotranciatura</span>
+                        </div>
+                    </div>
+
+                </main>
+
+                <!-- Footer -->
+                <footer id="contact"
+                    class="relative z-1 overflow-hidden bg-light before:absolute before:left-0 before:top-0 before:size-full before:bg-light before:opacity-40"
+                    style="background-image: url('./assets/images/background/bg4.webp'); background-size: cover;">
+
+                    <div class="footer-head">
+                        <div class="container relative z-1 px-8">
+                            <div class="xl:pt-20 pt-12.5 pb-6.25 border-b border-black/10">
+                                <div class="row g-3 items-center">
+                                    <div class="xl:w-1/4 md:w-full sm:w-1/2 w-full">
+                                        <h2 class="text-2xl">Contáctanos</h2>
+                                        <p class="text">Estamos aquí para ayudarte.</p>
+                                    </div>
+                                    <!-- Contact info items... -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Footer Top -->
+                    <div class="md:pt-20 pt-12.5 md:pb-11.25">
+                        <div class="container relative z-1 px-8">
+                            <div class="row">
+                                <div class="xl:w-1/4 sm:w-full">
+                                    <div class="mb-7.5 me-2">
+                                        <div class="mb-6">
+                                            <a href="#"><img loading="lazy" src="./assets/images/logo.png" alt="logo"
+                                                    width="400" height="120" class="max-w-45"></a>
+                                        </div>
+                                        <p class="text-2sm/[1.7] mb-5"><span class="text-primary">AMI</span>
+                                            Administración Médica Industrial.</p>
+                                    </div>
+                                </div>
+
+                                <div class="xl:w-1/6 md:w-1/4 w-1/2">
+                                    <div class="sm:mb-7.5 mb-5">
+                                        <h2 class="text-xl/[1.2] relative mb-5 font-medium">Nuestros Servicios</h2>
+                                        <ul class="list-hover1">
+                                            <li class="relative py-2 text-2sm leading-5 font-medium"><a
+                                                    class="link-hover hover:text-primary"
+                                                    href="#"><span>Emergencias</span></a></li>
+                                            <li class="relative py-2 text-2sm leading-5 font-medium"><a
+                                                    class="link-hover hover:text-primary" href="#"><span>Medicina
+                                                        Ocupacional</span></a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="xl:w-1/6 md:w-1/4 w-1/2">
+                                    <div class="sm:mb-7.5 mb-5">
+                                        <h2 class="text-xl/[1.2] relative mb-5 font-medium">Enlaces Útiles</h2>
+                                        <ul class="list-hover1">
+                                            <li class="relative py-2 text-2sm leading-5 font-medium"><a
+                                                    class="link-hover hover:text-primary" href="#"><span>Política de
+                                                        Privacidad</span></a></li>
+                                            <li class="relative py-2 text-2sm leading-5 font-medium"><a
+                                                    class="link-hover hover:text-primary"
+                                                    href="#"><span>Contacto</span></a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Footer Bottom -->
+                    <div class="footer-bottom">
+                        <div class="container relative z-1 px-8">
+                            <div class="py-3.75 border-t border-black/10 text-base">
+                                <div class="row">
+                                    <div class="lg:w-1/2 w-full xl:text-start text-center">
+                                        <p class="copyright-text">© <span class="current-year">2026</span> <a href="#"
+                                                target="_blank" class="text-primary">AMI WEB</a>. Todos los derechos
+                                            reservados.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </footer>
+                <!-- Footer End -->
+
+            </div>
+        </div>
+
+        <div id="offcanvas-right"
+            class="fixed top-0 right-0 z-9999999 h-screen overflow-y-auto transition-transform translate-x-full bg-white sm:w-100 w-88 custom-scroll">
+            <div class="flex items-center justify-between p-4 pb-0">
+                <button type="button" class="text-xl size-7.5 cursor-pointer" data-drawer-hide="offcanvas-right"
+                    aria-label="Close">
+                    <i class="fa-solid fa-xmark" aria-hidden="true"></i>
+                </button>
+            </div>
+            <div class="sm:p-7.5 p-5 grow overflow-y-auto">
+                <div class="mb-8.75">
+                    <div class="w-40 mb-5">
+                        <a href="#"><img loading="lazy" src="./assets/images/logo.png" alt="logo" width="400"
+                                height="120"></a>
+                    </div>
+                    <p class="mb-0">AMI - Administración Médica Industrial. Soluciones integrales de salud para
+                        empresas.</p>
+                </div>
+            </div>
+        </div>
+
+        <script>
+            // Simple script to handle mobile menu and offcanvas for demo
+            document.addEventListener('DOMContentLoaded', () => {
+                const toggler = document.querySelector('.xmenu-toggler');
+                const nav = document.querySelector('.header-nav');
+                const overlay = document.querySelector('.menu-close');
+
+                if (toggler) {
+                    toggler.addEventListener('click', () => {
+                        nav.classList.toggle('max-lg:-left-75');
+                        nav.classList.toggle('max-lg:left-0');
+                        overlay.classList.toggle('opacity-0');
+                        overlay.classList.toggle('visible');
+                        overlay.classList.toggle('pointer-events-none');
+                    });
+                }
+            });
+        </script>
+
+    </div>
+</body>
+
+</html>

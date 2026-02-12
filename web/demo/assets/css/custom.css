@@ -1,0 +1,11 @@
+/* Custom CSS for AMI Medic Theme */
+
+/* Logo White Filter */
+.logo-white-filter {
+  filter: brightness(0) invert(1);
+}
+
+/* Ensure mobile menu logo is visible */
+.header-nav .logo-white-filter {
+  filter: none; /* Keep original colors in mobile menu depending on background */
+}
